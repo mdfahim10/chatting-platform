@@ -1,0 +1,121 @@
+/* -------------------------- Index.js ------------------------------ */
+body {
+    background-color: #F0F2F5;       
+    font-family: 'Scambria', Tahoma, Geneva, Verdana, sans-serif;
+    color: #050505;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;             
+}
+h2 {
+    text-align: center;        
+    font-size: 2.5rem;        
+    font-weight: 800;       
+    color: #1c1e21;     
+    margin-top: 40px;     
+    margin-bottom: 40px;     
+    letter-spacing: -1px;      
+    border-bottom: 4px solid #0084FF; 
+    display: inline-block;    
+    padding-bottom: 10px;     
+}
+hr {
+    display: none; 
+}
+.chat {
+    background-color: #FFFFFF;       
+    width: 100%;
+    max-width: 500px;           
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;
+}
+.chat > p {
+    font-size: 0.85rem;
+    color: #65676B;                 
+    margin: 5px 0;
+    font-weight: 600;                
+    text-transform: capitalize;     
+}
+
+
+.message {
+    background-color: #0084FF;     
+    color: #FFFFFF;             
+    padding: 12px 18px;
+    border-radius: 18px;          
+    border-top-left-radius: 4px;    
+    margin: 10px 0;
+    width: fit-content;            
+    max-width: 85%;                 
+}
+
+
+.message p {
+    margin: 0;                     
+    font-size: 1rem;
+    line-height: 1.4;
+}
+/* -------------------------- new.js ------------------------------ */
+.chat-form {
+    background-color: #FFFFFF;      
+    width: 100%;
+    max-width: 500px;              
+    padding: 30px;             
+    margin: 20px auto;              
+    border-radius: 12px;          
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;      
+    box-sizing: border-box;     
+}
+.input-group {
+    margin-bottom: 20px;           
+}
+.input-group label {
+    display: block;           
+    margin-bottom: 8px;        
+    font-weight: 600;            
+    color: #4b4f56;               
+}
+.form-control {
+    width: 100%;                  
+    padding: 12px 15px;           
+    border: 1px solid #CED0D4;     
+    border-radius: 8px;          
+    font-size: 1rem;             
+    font-family: inherit;          
+    box-sizing: border-box;        
+    transition: all 0.2s ease-in-out; 
+    resize: vertical;             
+}
+.form-control:focus {
+    outline: none;
+    border-color: #0084FF;
+    box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.15);
+}
+.btn-primary {
+    width: 100%;                   
+    padding: 15px;                 
+    background-color: #0084FF;   
+    color: white;                 
+    border: none;
+    border-radius: 10px;       
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;              
+    transition: background-color 0.2s;
+}
+.btn-primary:hover {
+    background-color: #0073e6;
+}
+h2 {
+    text-align: center;
+    color: #1c1e21;
+}
+hr {
+    display: none;
+}

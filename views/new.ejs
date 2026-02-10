@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write new chat</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <h2>Create new chat!</h2>
+    <hr>
+    
+    <form method="POST" action="/chats" class="chat-form">
+        
+        <div class="input-group">
+            <label for="from">Sender</label>
+            <input type="text" id="from" placeholder="Sender Name" name="from" class="form-control"> 
+        </div>
+        
+        <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="5">Write your message here ...</textarea>
+        </div>
+        
+        <div class="input-group">
+            <label for="to">Receiver</label>
+            <input type="text" id="to" placeholder="Receiver Name" name="to" class="form-control">
+        </div>
+        
+        <button type="submit" class="btn-primary">Create Chat</button>
+    </form>
+</body>
+</html>
