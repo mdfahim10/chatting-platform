@@ -68,6 +68,13 @@ app.patch("/chats/:id", async (req, res) => {
     console.log(updatedChat);
     res.redirect("/chats");
 });
+//-------------------Destroy Route------------------
+app.delete("/chats/:id", async (req, res) => {
+    let { id } = req.params;
+    let deletedChat = await Chat.findByIdAndDelete(id);
+    console.log(deletedChat);
+    res.redirect("/chats");
+});
 /* ------------------ Server ------------------ */
 const PORT = 8080;
 app.listen(PORT, () => {
