@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -13,7 +14,7 @@ app.use(methodOverride("_method"));
 /* ------------------ MongoDB Connection ------------------ */
 async function connectDB() {
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/chat");
+        await mongoose.connect(process.env.MONGO_URL);
         console.log("MongoDB connected successfully");
     } catch (err) {
         console.error("MongoDB connection error:", err);
@@ -31,19 +32,17 @@ app.get("/chats",async (req,res)=>{
     console.log(chats);
     res.render("index.ejs",{chats});
 });
+//-------------------New Route------------------
+app.get("/chats/new",async (req,res)=>{
+    let chats = await Chat.find();
+    res.render("new.ejs");
+});
 // ------------------- Show Route ------------------
 app.get("/chats/:id", async (req, res) => {
     let { id } = req.params;
     let chat = await Chat.findById(id);
     res.render("show.ejs", { chat });
 });
-
-//-------------------New Route------------------
-app.get("/chats/new",async (req,res)=>{
-    let chats = await Chat.find();
-    res.render("new.ejs");
-});
-
 //--------------- Create Route ------------------
 app.post("/chats", async (req, res) => {
     let { from, to, message } = req.body;
@@ -83,7 +82,7 @@ app.delete("/chats/:id", async (req, res) => {
     res.redirect("/chats");
 });
 /* ------------------ Server ------------------ */
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

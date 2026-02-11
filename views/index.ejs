@@ -12,10 +12,13 @@
     <hr>
 
     <div class="newChat">
-        <form method="GET" action="/chats/new">
-            <button class="newbutton">New Chats</button>
-        </form>
-    </div>
+    <form method="GET" action="/chats/new">
+        <button type="submit" class="newbutton">
+            + New Chat
+        </button>
+    </form>
+</div>
+
 
     <br>
 
@@ -24,15 +27,22 @@
             <p>Sender : <%= chat.from %></p>
             <div class="message">
                 <p><%= chat.message %></p>
-                <form method="GET" action="/chats/<%= chat._id %>">
-                    <button>View</button>
-                </form>
-                <form method="GET" action="/chats/<%= chat._id %>/edit">
-                    <button type="submit">Edit</button>
-                </form>
-                <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
-                    <button type="submit">Delete</button>
-                </form>
+                <div class="btn-group">
+
+    <form method="GET" action="/chats/<%= chat._id %>">
+        <button class="btn">View</button>
+    </form>
+
+    <form method="GET" action="/chats/<%= chat._id %>/edit">
+        <button class="btn">Edit</button>
+    </form>
+
+    <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+
+</div>
+
             </div>
 
             <p>Receiver : <%= chat.to %></p>

@@ -1,7 +1,7 @@
-/* -------------------------- Index.js ------------------------------ */
+/* -------------------------- Index.ejs ------------------------------ */
 body {
     background-color: #F0F2F5;       
-    font-family: 'Scambria', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Cambria, "Times New Roman", Times, serif;
     color: #050505;
     margin: 0;
     padding: 20px;
@@ -60,7 +60,36 @@ hr {
     font-size: 1rem;
     line-height: 1.4;
 }
-/* -------------------------- new.js ------------------------------ */
+.btn-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-group form {
+    margin: 0;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 70px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* -------------------------- new.ejs ------------------------------ */
 .chat-form {
     background-color: #FFFFFF;      
     width: 100%;
@@ -118,4 +147,45 @@ h2 {
 }
 hr {
     display: none;
+}
+.newChat {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.newbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0084FF;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+.newbutton:hover {
+    background-color: #0073e6;
+}
+.back-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0084FF;
+    border: 2px solid #0084FF;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #0084FF;
+    color: white;
 }
