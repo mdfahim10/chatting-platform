@@ -22,10 +22,11 @@
     <% for(let chat of chats) { %>
         <div class="chat">
             <p>Sender : <%= chat.from %></p>
-
             <div class="message">
                 <p><%= chat.message %></p>
-
+                <form method="GET" action="/chats/<%= chat._id %>">
+                    <button>View</button>
+                </form>
                 <form method="GET" action="/chats/<%= chat._id %>/edit">
                     <button type="submit">Edit</button>
                 </form>

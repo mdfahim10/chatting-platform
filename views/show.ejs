@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Chat</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+    <h2>Chat Details</h2>
+    <hr>
+
+    <div class="chat">
+        <p><strong>Sender:</strong> <%= chat.from %></p>
+
+        <div class="message">
+            <p><%= chat.message %></p>
+        </div>
+
+        <p><strong>Receiver:</strong> <%= chat.to %></p>
+
+        <p>
+            <%= chat.created_at.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) %><br>
+            <%= chat.created_at.toDateString() %>
+        </p>
+    </div>
+
+    <br>
+
+    <a href="/chats">⬅ Back to All Chats</a>
+
+</body>
+</html>

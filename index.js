@@ -31,6 +31,13 @@ app.get("/chats",async (req,res)=>{
     console.log(chats);
     res.render("index.ejs",{chats});
 });
+// ------------------- Show Route ------------------
+app.get("/chats/:id", async (req, res) => {
+    let { id } = req.params;
+    let chat = await Chat.findById(id);
+    res.render("show.ejs", { chat });
+});
+
 //-------------------New Route------------------
 app.get("/chats/new",async (req,res)=>{
     let chats = await Chat.find();
