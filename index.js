@@ -3,11 +3,13 @@ const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
 const Chat = require("./models/chat.js");
+const methodOverride = require("method-override");
 /* ------------------ View Engine Setup ------------------ */
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 /* ------------------ MongoDB Connection ------------------ */
 async function connectDB() {
     try {
@@ -48,7 +50,24 @@ app.post("/chats", async (req, res) => {
     await newChat.save();
     res.redirect("/chats");
 });
-
+//-------------------Edit Route------------------
+app.get("/chats/:id/edit", async (req, res) => {
+    let { id } = req.params;
+    let chat = await Chat.findById(id);
+    res.render("edit.ejs", { chat });
+});
+// ------------------- Update Route ------------------
+app.patch("/chats/:id", async (req, res) => {
+    let { id } = req.params;
+    let { message } = req.body;
+    let updatedChat = await Chat.findByIdAndUpdate(
+        id,
+        { message: message },
+        { runValidators: true, new: true }
+    );
+    console.log(updatedChat);
+    res.redirect("/chats");
+});
 /* ------------------ Server ------------------ */
 const PORT = 8080;
 app.listen(PORT, () => {
