@@ -1,22 +1,22 @@
-# 💬 Chatting Platform
+#Chatting Platform
 
 A simple Chatting Platform built using **Node.js, Express, MongoDB, and EJS** implementing full CRUD operations following RESTful routing principles.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ➕ Create new chats  
-- 📖 View all chats  
-- 👁 View specific chat  
-- ✏️ Edit chat message  
-- 🗑 Delete chat  
-- 🕒 Display time and date  
-- 🎨 Clean and modern UI  
+-  Create new chats  
+-  View all chats  
+-  View specific chat  
+-  Edit chat message  
+-  Delete chat  
+-  Display time and date  
+-  Clean and modern UI  
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Node.js
 - Express.js
@@ -28,7 +28,7 @@ A simple Chatting Platform built using **Node.js, Express, MongoDB, and EJS** im
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 chatting-platform/
 │
@@ -50,11 +50,11 @@ chatting-platform/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/chatting-platform.git  
+git clone https://github.com/mdfahim10/chatting-platform 
 cd chatting-platform
 
 2️⃣ Install dependencies
@@ -75,7 +75,7 @@ http://localhost:8080/chats
 
 ---
 
-## 📌 RESTful Routes Implemented
+##  RESTful Routes Implemented
 
 GET     /chats            → View all chats  
 GET     /chats/new        → New chat form  
@@ -87,7 +87,7 @@ DELETE  /chats/:id        → Delete chat
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 
 - Understanding RESTful routing  
 - Working with MongoDB & Mongoose  
@@ -99,7 +99,7 @@ DELETE  /chats/:id        → Delete chat
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - Add authentication (Login / Signup)  
 - Add real-time chat using Socket.io  
@@ -109,8 +109,9 @@ DELETE  /chats/:id        → Delete chat
 
 ---
 
-## 👨‍💻 Author
-
+##  Author
+Md Fahim
+https://mdfahimportfolio.netlify.app/
 Developed as a backend learning project to master Express and MongoDB concepts.
 
 ---
